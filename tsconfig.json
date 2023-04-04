@@ -13,6 +13,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "paths": {
+      "@dnd/*": ["src/app/*/index.ts"],
+      "@dnd/features/*": ["src/app/features/*/index.ts"]
+    },
     "useDefineForClassFields": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
