@@ -1,1 +1,4 @@
-<p>player-characters works!</p>
+<dnd-companion-characters-list
+  [characters]="characters"
+  (selectCharacter)="onCharacterSelect($event)"
+></dnd-companion-characters-list>

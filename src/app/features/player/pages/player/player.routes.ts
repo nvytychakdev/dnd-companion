@@ -28,6 +28,11 @@ export const PLAYER_ROUTES: Route[] = [
           ),
       },
       {
+        path: 'characters/:characterId',
+        loadChildren: () =>
+          import('@dnd/features/character').then((mod) => mod.CHARACTER_ROUTES),
+      },
+      {
         path: '**',
         redirectTo: '',
       },

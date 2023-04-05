@@ -1,4 +1,5 @@
 .player-actions-card {
-  @apply flex border px-4 py-4 rounded-lg hover:bg-white hover:text-black transition-colors cursor-pointer;
+  @apply flex border px-4 py-4 rounded-lg 
+  border-gray-900 bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer;
   min-height: 150px;
 }

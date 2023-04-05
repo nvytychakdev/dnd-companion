@@ -1,7 +1,12 @@
 :host {
-  @apply flex border-b box-border justify-center border-slate-700 px-6 py-4 w-full;
+  @apply flex border-b box-border justify-center border-gray-600 w-full;
 }
 
-.header-default-btn {
-  @apply px-2 py-1 rounded-lg font-semibold text-gray-200 hover:text-white;
+.default-header-btn {
+  @apply px-4 py-1 rounded-lg font-medium text-neutral-400 transition-colors hover:bg-gray-900 hover:text-white;
+  min-width: 100px;
+}
+
+.default-header-btn.active {
+  @apply bg-gray-900 text-white;
 }
