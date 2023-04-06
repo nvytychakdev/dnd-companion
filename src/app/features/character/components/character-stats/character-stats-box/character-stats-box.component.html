@@ -1,0 +1,30 @@
+<div
+  [id]="label | lowercase"
+  class="flex flex-col gap-2"
+  style="min-width: 110px"
+>
+  <div
+    class="px-4 py-2 relative flex flex-col items-center border rounded-lg border-gray-800"
+  >
+    <h1 class="text-gray-400 text-xs uppercase">{{ label }}</h1>
+
+    <ng-container *ngIf="isStatsType; else defaultValue">
+      <p *ngIf="isNumeric(bonus)" class="py-4 text-4xl font-bold">
+        {{ bonus >= 0 ? '+' + bonus : bonus }}
+      </p>
+    </ng-container>
+
+    <ng-template #defaultValue>
+      <p class="py-4 text-4xl font-bold">
+        {{ value }}
+      </p>
+    </ng-template>
+  </div>
+
+  <div
+    *ngIf="isStatsType && isNumeric(bonus)"
+    class="rounded-lg px-5 py-2 bg-gray-800 text-white text-center font-bold"
+  >
+    {{ value }}
+  </div>
+</div>

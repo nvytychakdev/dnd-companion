@@ -1,0 +1,17 @@
+<div
+  [id]="label"
+  class="flex flex-col gap-2 p-4 border rounded-lg border-gray-800"
+>
+  <div *ngFor="let prof of proficiencies" class="flex items-center gap-4">
+    <i
+      class="block rounded-full w-2 h-2"
+      [class.bg-gray-800]="!prof.checked"
+      [class.bg-gray-400]="prof.checked"
+    ></i>
+    <span class="font-bold text-center" style="min-width: 20px">
+      {{ prof.value }}
+    </span>
+    <span class="text-gray-400">{{ prof.label }}</span>
+  </div>
+  <h1 class="text-gray-400 text-xs uppercase self-center">{{ label }}</h1>
+</div>
