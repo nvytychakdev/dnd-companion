@@ -1,0 +1,9 @@
+<section id="character-details-stats" class="flex flex-col gap-6">
+  <dnd-companion-character-stats-box
+    *ngFor="let stat of stats"
+    type="stats"
+    [label]="stat.label"
+    [value]="stat.value"
+    [bonus]="stat.bonus"
+  ></dnd-companion-character-stats-box>
+</section>

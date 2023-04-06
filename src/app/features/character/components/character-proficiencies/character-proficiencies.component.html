@@ -1,0 +1,28 @@
+<section
+  id="character-details-proficiencies"
+  class="flex flex-col gap-4"
+  style="min-width: 300px"
+>
+  <dnd-companion-character-proficiencies-single
+    label="Inspiration"
+    [value]="2"
+  ></dnd-companion-character-proficiencies-single>
+
+  <dnd-companion-character-proficiencies-single
+    label="Proficiency Bonus"
+    [value]="1"
+  ></dnd-companion-character-proficiencies-single>
+
+  <dnd-companion-character-proficiencies-section
+    [proficiencies]="throws"
+  ></dnd-companion-character-proficiencies-section>
+
+  <dnd-companion-character-proficiencies-section
+    [proficiencies]="skills"
+  ></dnd-companion-character-proficiencies-section>
+
+  <dnd-companion-character-proficiencies-single
+    label="Passive Wisdom"
+    [value]="2"
+  ></dnd-companion-character-proficiencies-single>
+</section>
