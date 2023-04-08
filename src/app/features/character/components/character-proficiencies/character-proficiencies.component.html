@@ -3,26 +3,36 @@
   class="flex flex-col gap-4"
   style="min-width: 300px"
 >
-  <dnd-companion-character-proficiencies-single
-    label="Inspiration"
-    [value]="2"
-  ></dnd-companion-character-proficiencies-single>
+  <div
+    class="flex flex-row border overflow-hidden items-center gap-4 rounded-lg border-gray-800"
+  >
+    <h1
+      class="block w-full py-3 font-bold text-center cursor-pointer"
+      [class.bg-gray-800]="isInspired"
+      (click)="toggleInspiration()"
+    >
+      {{ isInspired ? 'Inspired' : '...' }}
+    </h1>
+  </div>
 
   <dnd-companion-character-proficiencies-single
     label="Proficiency Bonus"
-    [value]="1"
+    [value]="character?.proficiencyBonus"
   ></dnd-companion-character-proficiencies-single>
 
   <dnd-companion-character-proficiencies-section
+    label="Saving throws"
     [proficiencies]="throws"
   ></dnd-companion-character-proficiencies-section>
 
   <dnd-companion-character-proficiencies-section
+    label="Skills"
     [proficiencies]="skills"
+    [hasType]="true"
   ></dnd-companion-character-proficiencies-section>
 
   <dnd-companion-character-proficiencies-single
     label="Passive Wisdom"
-    [value]="2"
+    [value]="character?.passiveWisdom"
   ></dnd-companion-character-proficiencies-single>
 </section>

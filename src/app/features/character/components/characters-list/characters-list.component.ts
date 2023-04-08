@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Character } from '../../interfaces/character.interface';
+import { Character } from '@dnd/core';
 
 @Component({
   selector: 'dnd-companion-characters-list',

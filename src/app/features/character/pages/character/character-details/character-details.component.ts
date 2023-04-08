@@ -1,8 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { CharacterProficienciesComponent } from '../../../components/character-proficiencies/character-proficiencies.component';
-import { CharacterStatsCombatComponent } from '../../../components/character-stats-combat/character-stats-combat.component';
-import { CharacterStatsComponent } from '../../../components/character-stats/character-stats.component';
+import { Component, inject } from '@angular/core';
+import {
+  CharacterStatsComponent,
+  CharacterProficienciesComponent,
+  CharacterInfoComponent,
+  CharacterStatsCombatComponent,
+} from '../../../components';
+import { CharacterService } from '@dnd/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'dnd-companion-character-details',
@@ -12,8 +17,16 @@ import { CharacterStatsComponent } from '../../../components/character-stats/cha
     CharacterStatsComponent,
     CharacterProficienciesComponent,
     CharacterStatsCombatComponent,
+    CharacterInfoComponent,
   ],
   templateUrl: './character-details.component.html',
   styleUrls: ['./character-details.component.scss'],
 })
-export class CharacterDetailsComponent {}
+export class CharacterDetailsComponent {
+  private _route = inject(ActivatedRoute);
+  private _character = inject(CharacterService);
+
+  character = this._character.getCharacterById(
+    this._route.snapshot.params['characterId']
+  );
+}

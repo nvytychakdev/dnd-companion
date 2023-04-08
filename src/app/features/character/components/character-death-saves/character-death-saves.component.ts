@@ -10,9 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CharacterDeathSavesComponent {
   steps = Array(3).fill(null);
-
   successes = 0;
-
   failures = 0;
 
   onSuccess(): void {

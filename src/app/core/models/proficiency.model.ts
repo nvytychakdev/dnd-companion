@@ -1,0 +1,148 @@
+import { Proficiency, Stat } from '../interfaces';
+
+export const BASE_SKILL_PROFICIENCIES: Proficiency[] = [
+  {
+    label: 'Acrobatics',
+    type: 'dexterity',
+    value: 0,
+    checked: false,
+    skillType: 'acrobatics',
+  },
+  {
+    label: 'Animal Handling',
+    type: 'wisdom',
+    value: 0,
+    checked: false,
+    skillType: 'animalHandling',
+  },
+  {
+    label: 'Arcana',
+    type: 'intelligence',
+    value: 0,
+    checked: false,
+    skillType: 'arcana',
+  },
+  {
+    label: 'Athletics',
+    type: 'strength',
+    value: 0,
+    checked: false,
+    skillType: 'athletics',
+  },
+  {
+    label: 'Deceotion',
+    type: 'charisma',
+    value: 0,
+    checked: false,
+    skillType: 'deceotion',
+  },
+  {
+    label: 'History',
+    type: 'intelligence',
+    value: 0,
+    checked: false,
+    skillType: 'history',
+  },
+  {
+    label: 'Insight',
+    type: 'wisdom',
+    value: 0,
+    checked: false,
+    skillType: 'insight',
+  },
+  {
+    label: 'Intimidation',
+    type: 'charisma',
+    value: 0,
+    checked: false,
+    skillType: 'intimidation',
+  },
+  {
+    label: 'Investigation',
+    type: 'intelligence',
+    value: 0,
+    checked: false,
+    skillType: 'investigation',
+  },
+  {
+    label: 'Medicine',
+    type: 'wisdom',
+    value: 0,
+    checked: false,
+    skillType: 'medicine',
+  },
+  {
+    label: 'Nature',
+    type: 'intelligence',
+    value: 0,
+    checked: false,
+    skillType: 'nature',
+  },
+  {
+    label: 'Perception',
+    type: 'wisdom',
+    value: 0,
+    checked: false,
+    skillType: 'perception',
+  },
+  {
+    label: 'Performance',
+    type: 'charisma',
+    value: 0,
+    checked: false,
+    skillType: 'performance',
+  },
+  {
+    label: 'Persuasion',
+    type: 'charisma',
+    value: 0,
+    checked: false,
+    skillType: 'persuasion',
+  },
+  {
+    label: 'Religion',
+    type: 'intelligence',
+    value: 0,
+    checked: false,
+    skillType: 'religion',
+  },
+  {
+    label: 'Sleight of Hand',
+    type: 'dexterity',
+    value: 0,
+    checked: false,
+    skillType: 'sleightOfHand',
+  },
+  {
+    label: 'Stealth',
+    type: 'dexterity',
+    value: 0,
+    checked: false,
+    skillType: 'stealth',
+  },
+  {
+    label: 'Survival',
+    type: 'wisdom',
+    value: 0,
+    checked: false,
+    skillType: 'survival',
+  },
+];
+
+export const BASE_SAVING_THROWS_PROFICIENCIES: Proficiency[] = [
+  { label: 'Strength', type: 'strength', value: 0, checked: false },
+  { label: 'Dexterity', type: 'dexterity', value: 0, checked: false },
+  { label: 'Constitution', type: 'constitution', value: 0, checked: false },
+  { label: 'Intelligence', type: 'intelligence', value: 0, checked: false },
+  { label: 'Wisdom', type: 'wisdom', value: 0, checked: false },
+  { label: 'Charisma', type: 'charisma', value: 0, checked: false },
+];
+
+export const BASE_STATS: Stat[] = [
+  { label: 'Strength', type: 'strength', value: 10, bonus: 0 },
+  { label: 'Dexterity', type: 'dexterity', value: 10, bonus: 0 },
+  { label: 'Constitution', type: 'constitution', value: 10, bonus: 0 },
+  { label: 'Intelligence', type: 'intelligence', value: 10, bonus: 0 },
+  { label: 'Wisdom', type: 'wisdom', value: 10, bonus: 0 },
+  { label: 'Charisma', type: 'charisma', value: 10, bonus: 0 },
+];

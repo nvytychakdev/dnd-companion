@@ -19,7 +19,9 @@
   <dnd-companion-character-health></dnd-companion-character-health>
 
   <section class="flex flex-row gap-4 max-w-md">
-    <dnd-companion-character-hit-dice></dnd-companion-character-hit-dice>
+    <dnd-companion-character-hit-dice
+      [character]="character"
+    ></dnd-companion-character-hit-dice>
     <dnd-companion-character-death-saves></dnd-companion-character-death-saves>
   </section>
 </div>

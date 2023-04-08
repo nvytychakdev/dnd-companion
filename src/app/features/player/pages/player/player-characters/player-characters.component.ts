@@ -1,7 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Character, CharactersListComponent } from '@dnd/features/character';
+import { CharactersListComponent } from '@dnd/features/character';
 import { Router } from '@angular/router';
+import { Character, CharacterService } from '@dnd/core';
 
 @Component({
   selector: 'dnd-companion-player-characters',
@@ -12,25 +13,9 @@ import { Router } from '@angular/router';
 })
 export class PlayerCharactersComponent {
   private _router = inject(Router);
+  private _characters = inject(CharacterService);
 
-  characters: Character[] = [
-    {
-      id: '1',
-      name: 'First',
-    },
-    {
-      id: '2',
-      name: 'Second',
-    },
-    {
-      id: '3',
-      name: 'Third',
-    },
-    {
-      id: '4',
-      name: 'Fourth',
-    },
-  ];
+  characters: Character[] = this._characters.getCharacters();
 
   onCharacterSelect(character: Character): void {
     this._router.navigate([`/player/characters/${character.id}`]);

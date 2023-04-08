@@ -1,5 +1,16 @@
 <div class="flex gap-4">
-  <dnd-companion-character-stats></dnd-companion-character-stats>
-  <dnd-companion-character-proficiencies></dnd-companion-character-proficiencies>
-  <dnd-companion-character-stats-combat></dnd-companion-character-stats-combat>
+  <dnd-companion-character-stats
+    [character]="character"
+  ></dnd-companion-character-stats>
+  <dnd-companion-character-proficiencies
+    [character]="character"
+  ></dnd-companion-character-proficiencies>
+  <div class="flex flex-col gap-4">
+    <dnd-companion-character-info
+      [character]="character"
+    ></dnd-companion-character-info>
+    <dnd-companion-character-stats-combat
+      [character]="character"
+    ></dnd-companion-character-stats-combat>
+  </div>
 </div>
