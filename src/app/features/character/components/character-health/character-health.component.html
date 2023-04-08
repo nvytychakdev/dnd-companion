@@ -2,10 +2,26 @@
   id="character-health"
   class="p-2 pl-4 relative flex flex-row items-center border rounded-lg border-gray-800"
 >
-  <span class="flex-1 flex gap-4 items-baseline justify-center">
-    <span class="font-bold text-4xl">{{ character?.health }}</span>
-    out of
-    <span class="font-bold text-4xl">{{ character?.maxHealth }}</span>
+  <span class="flex-1 flex gap-4 items-center justify-center">
+    <div class="flex flex-col gap-2">
+      <h1 class="text-gray-400 text-center text-xs uppercase">Current</h1>
+      <span class="font-bold text-center text-4xl">
+        {{ character?.health }}
+      </span>
+    </div>
+    <span class="font-bold text-4xl mt-5 text-gray-700">/</span>
+    <div class="flex flex-col gap-2">
+      <h1 class="text-gray-400 text-center text-xs uppercase">Max</h1>
+      <span class="font-bold text-center text-4xl">
+        {{ character?.maxHealth }}
+      </span>
+    </div>
+    <div class="flex flex-col gap-2 min-w-[70px]">
+      <h1 class="text-gray-400 text-center text-xs uppercase">Temp</h1>
+      <span class="font-bold text-center text-4xl">
+        {{ character?.tempHealth || '--' }}
+      </span>
+    </div>
   </span>
 
   <div class="flex flex-col gap-2">

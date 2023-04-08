@@ -106,15 +106,15 @@ export class Character {
   }
 
   get tempHealth(): number {
-    return 10;
+    return 4;
   }
 
   get armorClass(): number {
-    throw new Error('Not implemented');
+    return 14;
   }
 
   get initiative(): number {
-    throw new Error('Not implemented');
+    return getCharacterModifierByStat(this, 'dexterity');
   }
 
   get speed(): number {
