@@ -16,7 +16,9 @@
     ></dnd-companion-character-stats-box>
   </section>
 
-  <dnd-companion-character-health></dnd-companion-character-health>
+  <dnd-companion-character-health
+    [character]="character"
+  ></dnd-companion-character-health>
 
   <section class="flex flex-row gap-4 max-w-md">
     <dnd-companion-character-hit-dice

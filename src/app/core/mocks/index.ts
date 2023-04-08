@@ -4,6 +4,7 @@ import { DEFAULT_RACES, RaceType } from '../models/race.model';
 
 const mockCharacter = new Character('1', 'Anduina');
 mockCharacter.level = 1;
+mockCharacter.health = 10;
 mockCharacter.class = DEFAULT_CLASSES[ClassType.CLERIC];
 mockCharacter.race = DEFAULT_RACES[RaceType.AASIMAR];
 mockCharacter.stats = [

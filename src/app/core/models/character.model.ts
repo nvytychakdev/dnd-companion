@@ -20,6 +20,7 @@ export class Character {
   protected _id: string;
   protected _name: string;
   protected _level: number;
+  protected _health?: number;
   protected _stats: CharacterStat[];
   protected _skills: SkillType[];
   protected _race?: Race;
@@ -88,11 +89,24 @@ export class Character {
   }
 
   get health(): number {
-    throw new Error('Not implemented');
+    if (typeof this._health === 'undefined') {
+      throw new Error('Health is missing');
+    }
+
+    return this._health;
+  }
+
+  set health(health: number) {
+    if (health < 0) return;
+    this._health = health > this.maxHealth ? this.maxHealth : health;
   }
 
   get maxHealth(): number {
-    throw new Error('Not implemented');
+    return 10;
+  }
+
+  get tempHealth(): number {
+    return 10;
   }
 
   get armorClass(): number {
