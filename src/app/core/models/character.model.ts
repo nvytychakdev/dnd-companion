@@ -104,7 +104,7 @@ export class Character {
   }
 
   get speed(): number {
-    throw new Error('Not implemented');
+    return this.race.speed;
   }
 
   get stats(): CharacterStatWithModifier[] {

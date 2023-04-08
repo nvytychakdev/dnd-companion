@@ -23,6 +23,16 @@ export class Race {
     if (!this._name) throw new Error('No name');
     return this._name;
   }
+
+  get vision(): number {
+    if (!this._extras.vision) throw new Error('No vision');
+    return this._extras.vision;
+  }
+
+  get speed(): number {
+    if (!this._extras.speed) throw new Error('No speed');
+    return this._extras.speed;
+  }
 }
 
 export const DEFAULT_RACES = {
